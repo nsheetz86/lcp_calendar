@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Calendar Widget</title>
+</head>
+<body>
+  <div class="mondayWidget"></div>
+
+  <script>
+    // Replace YOUR_CALENDAR_ID with your Google Calendar ID
+    const calendarId = 'YOUR_CALENDAR_ID';
+
+    // Construct the URL for the Google Calendar embed
+    const url = `https://calendar.google.com/calendar/embed?src=n.sheetz%40lcpmedia.com&ctz=America%2FChicago`;
+
+    // Create an iframe element
+    const iframe = document.createElement('iframe');
+
+    // Set the src attribute of the iframe to the Google Calendar embed URL
+    iframe.setAttribute('src', url);
+
+    // Set the width and height attributes of the iframe to 100%
+    iframe.setAttribute('width', '100%');
+    iframe.setAttribute('height', '100%');
+
+    // Add the iframe to the Monday.com widget container
+    const widgetContainer = document.querySelector('.mondayWidget');
+    widgetContainer.appendChild(iframe);
+  </script>
+</body>
+</html>
